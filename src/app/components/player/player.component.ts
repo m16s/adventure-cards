@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportService, Orientations } from '../../services/viewport.service';
 
 @Component({
   selector: 'app-player',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  horizontalOrientation = true;
 
-  constructor() { }
+  constructor(
+    private viewport: ViewportService,
+  ) {
+    viewport.viewport$.subscribe(viewport => {
+      this.horizontalOrientation = viewport.orientation === Orientations.Horizontal;
+    });
+  }
 
   ngOnInit() {
   }

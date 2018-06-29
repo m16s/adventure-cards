@@ -1,22 +1,58 @@
-:host {
+$wScaleV: .2 / .35;
+$hScaleV: 1;
+$wScaleH: 1;
+$hScaleH: .35 / .225;
+
+.player {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  
   justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+
   height: 100vh;
+  // height: 90vh;
+  // padding-top: 5vh;
 
-  @media (min-width: 765px) {
+  &--h.player {
     flex-direction: row;
-  }  
-}
+    flex-wrap: nowrap;
 
-.card {
-  height: #{100vh * .35 * 1};
-  width: #{100vh * .285 * 1};
+    height: 100vh;
+    margin-top: 0;
+  
+    .card {
+      width: #{ (100vw * .25) * $wScaleH };
+      height: #{(100vw * .25) * $hScaleH };
 
-  @media (min-width: 765px) {
-    height: #{(100vw / 3.5) * .75};
-    width: #{(100vw / 2.85) * .75};
+      &--left {
+        order: 0;
+      }
+
+      &--center {
+        order: 1;
+        margin: 0;
+      }
+
+      &--right {
+        order: 2;
+      }
+    }
   }
 
+  .card {
+    width: #{ (100vh * .35) * $wScaleV };
+    height: #{(100vh * .35) * $hScaleV };
+
+    &--center {
+      margin: 0 50vw;
+      // slightly increased
+      width: #{ (100vh * .35) * $wScaleV };
+      height: #{(100vh * .35) * $hScaleV };
+    }
+  }
 }
+

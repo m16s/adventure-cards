@@ -34,6 +34,10 @@ export class ViewportService {
     return this._viewport$.asObservable();
   }
 
+  get viewport() {
+    return this.lastViewport;
+  }
+
   private onResize() {
     const newVP = this.calculateViewportUpdate();
     const prevVP = this.lastViewport;
