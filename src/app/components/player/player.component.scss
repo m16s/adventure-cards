@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+
+  @media (min-width: 765px) {
+    flex-direction: row;
+  }  
+}
+
+.card {
+  height: #{100vh * .35 * 1};
+  width: #{100vh * .285 * 1};
+
+  @media (min-width: 765px) {
+    height: #{(100vw / 3.5) * .75};
+    width: #{(100vw / 2.85) * .75};
+  }
+
+}
