@@ -14,6 +14,7 @@ export interface CardAction {
 export interface Card {
   id: CardId;
   text: string;
+  isStart: boolean;
   actions: CardAction[];
 }
 

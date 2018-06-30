@@ -9,6 +9,7 @@
         {
           "id": "0",
           "text": "beginning",
+          "isStart": true,
           "actions": [
             {
               "id": "1",
