@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 type CardId = string;
 
@@ -32,12 +33,19 @@ interface AdventureAPIResponse {
   providedIn: 'root'
 })
 export class AdventuresService {
+  private _adventures$ = new BehaviorSubject<Adventure[]>([]);
 
   constructor(
     private _http: HttpClient,
-  ) { }
+  ) {
+    this.getAdventures().subscribe(res => this._adventures$.next(res.adventures));
+  }
 
-  getAdventures() {
+  get adventures$(): Observable<Adventure[]> {
+    return this._adventures$.asObservable();
+  }
+
+  private getAdventures() {
     const url = environment.adventuresUrl;
 
     return this._http

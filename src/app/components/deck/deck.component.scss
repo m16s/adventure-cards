@@ -1,0 +1,16 @@
+$wScale: .225 / .35;
+$hScale: 1;
+
+.deck {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+
+  // width: #{ 100px * $wScale };
+  // height: #{ 100px * $hScale };
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid black;
+  border-radius: 5px;
+}

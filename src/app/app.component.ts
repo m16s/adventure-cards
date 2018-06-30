@@ -8,10 +8,4 @@ import { AdventuresService } from './services/adventures.service';
 })
 export class AppComponent {
   title = 'app';
-
-  constructor(
-    adventures: AdventuresService,
-  ) {
-    adventures.getAdventures().subscribe(data => console.log(data));
-  }
 }

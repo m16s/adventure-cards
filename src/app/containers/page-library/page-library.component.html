@@ -1,0 +1,5 @@
+<div class="adv-list" [ngClass]="{ 'adv-list--h': horizontalOrientation }">
+  <div class="adv-item" *ngFor="let adventure of adventures">
+    <app-deck [adventure]="adventure"></app-deck>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+// $wScaleV: .2 / .35;
+// $hScaleV: 1;
+$wScale: 1;
+$hScale: .35 / .225;
+$deckSizeV: 25vw;
+$deckSizeH: 15vw;
+$deckPerRowH: 5;
+$deckPerRowV: 3;
+$deckGap: 1;
+
+.adv-list {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: baseline;
+  width: #{ $deckPerRowV * ($deckSizeV * $wScale + $deckGap * 2) };
+
+  &--h.adv-list {
+    width: #{ $deckPerRowH * ($deckSizeH * $wScale + $deckGap * 2) };
+
+    .adv-item {
+      margin: 1vw;
+      width: #{ $deckSizeH * $wScale };
+      height: #{ $deckSizeH * $hScale };
+    }
+  }
+}
+
+.adv-item {
+  margin: 2vh 1vw;
+  width: #{ $deckSizeV * $wScale };
+  height: #{ $deckSizeV * $hScale };
+}
