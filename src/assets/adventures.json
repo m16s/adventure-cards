@@ -1,0 +1,140 @@
+{
+  "creationDate": "2018-06-30T08:33:07.515Z",
+  "editDate": "2018-06-30T08:33:07.515Z",
+  "adventures": [
+    {
+      "id": "0",
+      "name": "test1",
+      "cards": [
+        {
+          "id": "0",
+          "text": "beginning",
+          "actions": [
+            {
+              "id": "1",
+              "text": "next: 1"
+            },
+            {
+              "id": "2",
+              "text": "next: 2"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "text": "1 text",
+          "actions": [
+            {
+              "id": "1",
+              "text": "next: 1"
+            },
+            {
+              "id": "2",
+              "text": "next: 2"
+            },
+            {
+              "id": "3",
+              "text": "next: 3"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "text": "2 text",
+          "actions": [
+            {
+              "id": "3",
+              "text": "next: 3"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "text": "3 text",
+          "actions": [
+            {
+              "id": "0",
+              "text": "next: beginning"
+            },
+            {
+              "id": "4",
+              "text": "next: 4 final"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "text": "4 final",
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "test1 clone",
+      "cards": [
+        {
+          "id": "0",
+          "text": "beginning",
+          "actions": [
+            {
+              "id": "1",
+              "text": "next: 1"
+            },
+            {
+              "id": "2",
+              "text": "next: 2"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "text": "1 text",
+          "actions": [
+            {
+              "id": "1",
+              "text": "next: 1"
+            },
+            {
+              "id": "2",
+              "text": "next: 2"
+            },
+            {
+              "id": "3",
+              "text": "next: 3"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "text": "2 text",
+          "actions": [
+            {
+              "id": "3",
+              "text": "next: 3"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "text": "3 text",
+          "actions": [
+            {
+              "id": "0",
+              "text": "next: beginning"
+            },
+            {
+              "id": "4",
+              "text": "next: 4 final"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "text": "4 final",
+          "actions": []
+        }
+      ]
+    }
+  ]
+}
