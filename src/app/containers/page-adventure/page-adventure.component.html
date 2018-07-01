@@ -1,3 +1,4 @@
-<p>
-  page-adventure works!
+<p *ngIf="noAdventureFound">
+  Nothing to see here. Go back!
 </p>
+<app-player *ngIf="gameplay" [gameplay]="gameplay"></app-player>

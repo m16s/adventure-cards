@@ -3,28 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Adventure } from '../models/Adventure';
 
-type CardId = string;
-
-export interface CardAction {
-  id: CardId;
-  text: string;
-}
-
-export interface Card {
-  id: CardId;
-  text: string;
-  isStart: boolean;
-  actions: CardAction[];
-}
-
-export interface Adventure {
-  id: string;
-  name: string;
-  cards: Card[];
-}
-
-interface AdventureAPIResponse {
+export interface AdventureAPIResponse {
   creationDate: string;
   editDate: string;
   adventures: Adventure[];

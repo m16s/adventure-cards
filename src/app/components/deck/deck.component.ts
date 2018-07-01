@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Adventure } from '../../services/adventures.service';
+import { Adventure } from '../../models/Adventure';
 
 @Component({
   selector: 'app-deck',

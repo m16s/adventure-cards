@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Adventure, Card, CardAction } from './adventures.service';
-import { randomInt } from '../utils/randomInt';
-import { randomArrayElements } from '../utils/randomArrayElements';
+import { Adventure, Card, CardAction } from "./Adventure";
+import { randomInt } from "../utils/randomInt";
+import { randomArrayElements } from "../utils/randomArrayElements";
 
-class Gameplay {
+export class Gameplay {
 
   constructor(
     private adventure: Adventure,
@@ -16,6 +15,11 @@ class Gameplay {
   getFirstCard(): Card {
     const startCards = this.cards.filter(c => c.isStart);
     const card = startCards[randomInt(0, startCards.length - 1)];
+
+    if (!card) {
+      throw new Error('no Start card');
+    }
+
     return card;
   }
 
@@ -25,7 +29,7 @@ class Gameplay {
 
   getTwoActions(card: Card): [CardAction, CardAction] | null {
     const actions = card.actions;
-    
+
     if (!actions || actions.length === 0) {
       return null;
     }
@@ -40,17 +44,5 @@ class Gameplay {
 
   isGameOver(card: Card): boolean {
     return !card.actions || card.actions.length === 0;
-  }
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class GameplayService {
-
-  constructor() { }
-
-  createGame(adventure: Adventure) {
-    return new Gameplay(adventure);
   }
 }

@@ -1,3 +1,5 @@
+export function randomFloat(max: number): number;
+export function randomFloat(min: number, max: number): number;
 export function randomFloat(min: number, max?: number): number {
 	if (max === undefined) {
 		max = min;

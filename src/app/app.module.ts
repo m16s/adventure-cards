@@ -19,7 +19,7 @@ import { PageLibraryComponent } from './containers/page-library/page-library.com
     DeckComponent,
     DeckListComponent,
     PageAdventureComponent,
-    PageLibraryComponent
+    PageLibraryComponent,
   ],
   imports: [
     BrowserModule,

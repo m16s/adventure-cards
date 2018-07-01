@@ -1,14 +1,32 @@
 :host {
-  display: flex;
   flex-shrink: 0;
   flex-grow: 0;
-  align-items: center;
-  justify-content: center;
+}
+
+.card {
   border: 1px solid black;
-  border-radius: 3vh;
+  border-radius: 2vh;
+  padding: 10%;
+  height: 100%;
 
   @media (min-width: 768px) {
-    border-radius: 3vw;
+    border-radius: 2vw;
   }
 
+  &--back.card {
+    background-color: black;
+    color: white;
+
+    .card__content {
+      border-color: white;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid black;
+  }
 }

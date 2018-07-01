@@ -1,8 +1,19 @@
-<div 
+<div
 class="player"
 [ngClass]="{ 'player--h': horizontalOrientation }"
 >
-  <app-card class="card card--center">center</app-card>
-  <app-card class="card card--left">left</app-card>
-  <app-card class="card card--right">right</app-card>
+  <app-card
+  class="card card--center"
+  [text]="card?.text"
+  ></app-card>
+  <app-card
+  class="card card--left"
+  [isBackSide]="true"
+  [text]="leftAction?.text"
+  ></app-card>
+  <app-card
+  class="card card--right"
+  [text]="rightAction?.text"
+  [isBackSide]="true"
+  ></app-card>
 </div>

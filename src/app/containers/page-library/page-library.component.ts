@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AdventuresService, Adventure } from '../../services/adventures.service';
+import { AdventuresService } from '../../services/adventures.service';
 import { ViewportService, Orientations } from '../../services/viewport.service';
+import { Adventure } from '../../models/Adventure';
 
 @Component({
   selector: 'app-page-library',
