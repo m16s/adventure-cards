@@ -2,7 +2,8 @@
 class="player"
 [ngClass]="{ 'player--h': horizontalOrientation }"
 >
-  <div class="card card--center">
+  <!-- cards -->
+  <div class="card card--center" (click)="cardClick(); false;">
     <app-card
     [text]="card?.text"
     ></app-card>
@@ -29,4 +30,14 @@ class="player"
     [isBackSide]="true"
     ></app-card>
   </a>
+
+  <!-- quit button -->
+  <button class="quit-trigger" (click)="isQuitMenuOn = true">✕</button>
+
+  <!-- quit screen -->
+  <div *ngIf="isQuitMenuOn" class="quit-screen">
+    <button class="quit-screen__button" type="button" (click)="onRestart()">Restart</button>
+    <button class="quit-screen__button" type="button" routerLink="/">Finish</button>
+    <button class="quit-screen__button" type="button" (click)="isQuitMenuOn = false">Cancel</button>
+  </div>
 </div>

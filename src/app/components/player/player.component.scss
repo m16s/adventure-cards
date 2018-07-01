@@ -56,5 +56,63 @@ $hScaleH: .35 / .225;
       height: #{(100vh * .35) * $hScaleV };
     }
   }
-}
 
+  .quit-trigger {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 5vh;
+    height: 5vh;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 3vh;
+    cursor: pointer;
+    outline: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .quit-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000, $alpha: .5);
+
+    &__button {
+      margin-top: 2vh;
+      padding: 1vh 1vw;
+      width: 90%;
+      background: #000;
+      border: 1px solid #fff;
+      // border: 0;
+      color: #fff;
+      // border-radius: .5vw;
+      outline: 0;
+      cursor: pointer;
+      font-size: 2vh;
+      text-align: center;
+
+      @media (min-width: 480px) {
+        font-size: 2vh;
+      }
+      @media (min-width: 768px) {
+        width: 20vw;
+        font-size: 2vw;
+      }
+      @media (min-width: 1024px) {
+        width: 15vw;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+}
