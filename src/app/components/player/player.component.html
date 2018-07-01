@@ -32,7 +32,11 @@ class="player"
   </a>
 
   <!-- quit button -->
-  <button class="quit-trigger" (click)="isQuitMenuOn = true">✕</button>
+  <button
+  class="quit-trigger"
+  *ngIf="!isQuitMenuOn"
+  (click)="isQuitMenuOn = true"
+  >✕</button>
 
   <!-- quit screen -->
   <div *ngIf="isQuitMenuOn" class="quit-screen">
