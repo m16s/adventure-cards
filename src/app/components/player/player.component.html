@@ -2,18 +2,31 @@
 class="player"
 [ngClass]="{ 'player--h': horizontalOrientation }"
 >
-  <app-card
-  class="card card--center"
-  [text]="card?.text"
-  ></app-card>
-  <app-card
+  <div class="card card--center">
+    <app-card
+    [text]="card?.text"
+    ></app-card>
+  </div>
+  <a
+  *ngIf="leftAction"
   class="card card--left"
-  [isBackSide]="true"
-  [text]="leftAction?.text"
-  ></app-card>
-  <app-card
+  href="#"
+  (click)="actionClick(leftAction); false;"
+  >
+    <app-card
+    [text]="leftAction?.text"
+    [isBackSide]="true"
+    ></app-card>
+  </a>
+  <a
+  *ngIf="rightAction"
   class="card card--right"
-  [text]="rightAction?.text"
-  [isBackSide]="true"
-  ></app-card>
+  href="#"
+  (click)="actionClick(rightAction); false;"
+  >
+    <app-card
+    [text]="rightAction?.text"
+    [isBackSide]="true"
+    ></app-card>
+  </a>
 </div>

@@ -25,13 +25,19 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.card = this.gameplay.getFirstCard();
-    this.updateCardsContent(this.card);
+    const card = this.gameplay.getFirstCard();
+    this.updateCardsContent(card);
   }
 
   updateCardsContent(card: Card) {
+    this.card = card;
     const actions = this.gameplay.getTwoActions(this.card);
     this.leftAction = actions ? actions[0] : null;
     this.rightAction = actions ? actions[1] : null;
+  }
+
+  actionClick(action: CardAction) {
+    const card = this.gameplay.getNextCard(action);
+    this.updateCardsContent(card);
   }
 }
